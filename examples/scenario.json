@@ -158,6 +158,7 @@
       "weight": 2
     }
   ],
+  "note_on_this_example": "This worked example is sealed with a plain CHECKSUM and no key, so that anyone can verify and re-score it without holding a secret. A real contested bake-off must be sealed with BAKEOFF_SEAL_KEY held by the CUSTOMER -- a seal that either vendor can recompute proves nothing.",
   "notes": "",
   "results": {
     "champion-a": {
@@ -217,8 +218,8 @@
   },
   "scenario_owner": "the customer",
   "schema": "rapp-bakeoff/1.0",
-  "seal": "hmac-sha256:1ebbe8b365552a4c5a79ec01cd5ec7aa29e21606de4c1b85d7dd86370d24f3e8",
-  "sealed_at": 1784985888,
+  "seal": "sha256:13aed0079721a9d8611290d4338838a3a1269376f7b96fdf677d5c2f48cd8886",
+  "sealed_at": 1753400000,
   "tasks": [
     "Reconcile 14 store ledgers against the GL extract and list every variance over $500",
     "Explain the three largest variances in plain language for a non-finance reader",

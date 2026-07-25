@@ -3,7 +3,7 @@
 **Customer:** a national retailer (finance operations)  
 **Date:** 2026-07-27  
 **Scenario owner:** the customer  
-**Pre-registration:** intact-hmac — metrics and weights are unchanged since registration
+**Pre-registration:** intact-checksum — metrics and weights are unchanged since registration
 
 ## Weighted score
 
@@ -46,9 +46,9 @@
 ## Method
 
 - The scenario and its 4 tasks were written by the customer.
-- Metrics, units, directions and weights were sealed **before** any measurement (intact-hmac).
+- Metrics, units, directions and weights were sealed **before** any measurement (intact-checksum).
 - Time box: 240 minutes per entrant on identical managed Windows laptops, no local admin.
 - Each entrant was operated by its own team, present throughout.
 - This result is published in full, including the metrics on which the leader lost. That commitment was made before the result was known.
 
-<sub>Scored with rapp-bake-off rapp-bakeoff/1.0 · seal hmac-sha256:1ebbe8b365552a4c…</sub>
+<sub>Scored with rapp-bake-off rapp-bakeoff/1.0 · seal sha256:13aed0079721a9d861129…</sub>

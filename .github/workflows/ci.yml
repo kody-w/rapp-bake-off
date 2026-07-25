@@ -10,8 +10,9 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
+      # No BAKEOFF_SEAL_KEY here on purpose: the published example is
+      # sealed keyless so any reviewer can reproduce these checks.
       - name: the scorer must be able to declare RAPP the loser
-        env: {BAKEOFF_SEAL_KEY: ci-key}
         run: |
           python3 - <<'PY'
           import json, subprocess, sys, copy
@@ -33,7 +34,6 @@ jobs:
           print("honest: the leader follows the measurements, not the name")
           PY
       - name: an altered pre-registration must refuse to score
-        env: {BAKEOFF_SEAL_KEY: ci-key}
         run: |
           python3 - <<'PY'
           import json, subprocess, sys
